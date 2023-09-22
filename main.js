@@ -2,7 +2,6 @@ const formulario = document.querySelector("#formAdd");
 const formEdit = document.querySelector("#formEdit");
 const dialog = document.querySelector("dialog");
 
-console.log(dialog)
 
 const url = "https://650cfbe547af3fd22f6817b0.mockapi.io/table"
 
@@ -25,6 +24,9 @@ formulario.addEventListener("submit", async (e)=>{
         body:JSON.stringify(dato)
     }
     const envio = await (await fetch(url,config)).json();
+    //Resetear el formulario
+    document.getElementById('formAdd').reset();
+    //Recargar la pagina cuando termine el listener
     location.reload()
 });
 
@@ -90,3 +92,33 @@ document.addEventListener("DOMContentLoaded", async (e)=>{
         })
     });
 });
+
+const deleteDAta = async(id)=>{
+    let config = {
+        method:"DELETE",
+        headers:{"content-type":"application/json"}
+    }
+    let res = await(await fetch( url + "/" + id , config )).json();
+    location.reload()
+}
+
+
+
+const editData = async (id)=>{
+    let dato;
+    let config;
+    formEdit.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        dato = Object.fromEntries(new FormData(e.target));
+        config = {
+            method:"PUT",
+            headers:{"content-type":"application/json"},
+            body: JSON.stringify(dato)
+        }
+        let res = fetch(url+"/"+id,config);
+        dialog.close();
+    })
+    
+}
+
+
