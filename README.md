@@ -1,49 +1,32 @@
-# Proyecto presupuesto 
+# Ejercicios de Js
 
 ### Contenido 
 
-
-- [Descripción del proyecto](#descripción-del-proyecto)
+- [Descripcion del repositorio](#descripcion-del-respositorio)
 
 - [Metodo de uso](#metodo-de-uso)
+
+- [Ejercicio Presupuesto](#ejercicio-presupuesto)
+
+- [Ejercicio Pokedex](#ejercicio-pokedex)
   
-- [Funcionalidades](#funcionalidades)
+### Descripción del repositorio
 
-- [API utilizada](#api)
-
-- [Estructura del Proyecto](#estructura-del-proyecto)
-
-### Descripción del proyecto
-
-- Esta es una aplicación web simple para gestionar un presupuesto. Puedes agregar ingresos y egresos, editarlos y eliminarlos utilizando una API mock. La aplicación está construida utilizando HTML, CSS y JavaScript.
+- Aqui se encuentran los proyectos de js en CampusLands.
 
 ## Metodo de uso
 
-1. Clona este repositorio en tu máquina local.
+1. Se desplaza a la rama del ejercicio.
 
 2. Abre el archivo `index.html` en tu navegador web.
 
-3. Verás una interfaz de usuario que te permite agregar ingresos y egresos, editarlos y eliminarlos.
+3. Verás una el ejercicio realizado.
 
-## Funcionalidades
+## Ejercicio Presupuesto
 
-:heavy_check_mark: `Ingreso:` Llena el formulario en la parte superior de la página para agregar ingresos o egresos. Ingresa el valor y selecciona el tipo (Ingreso o Egreso) y luego haz clic en "Enviar".
+Este ejercicio fue propuesto con el fin de calcular el presupuesto de una empresa, viendo los ingresos y los egresos de esta misma, imprimiendolos en pantalla y teniendo opciones de edita o eliminar.
 
-:heavy_check_mark: `Egreso:` Para editar un dato existente, haz clic en el botón "Editar" junto al dato que deseas editar. Se abrirá un cuadro de diálogo que te permite editar el valor y el tipo. Luego, haz clic en "Enviar" para guardar los cambios.
+## Ejercicio Pokedex
 
-:heavy_check_mark: `Editar:` Para editar un dato existente, haz clic en el botón "Editar" junto al dato que deseas editar. Se abrirá un cuadro de diálogo que te permite editar el valor y el tipo. Luego, haz clic en "Enviar" para guardar los cambios.
+Este ejercicio fue propuesto con el fin de entender el tema de las api y como recorrerlas, para imprimir un pokemon y guardarlo en un boton, mostrando diferente atributos de estos mismos.
 
-:heavy_check_mark: `Borrar:` Para eliminar un dato existente, haz clic en el botón "Eliminar" junto al dato que deseas eliminar.
-
-:heavy_check_mark: `Visualización de Datos:` Todos los datos ingresados se muestran en una tabla en la parte inferior de la página. Puedes ver el ID, el valor y el tipo de cada dato.
-
-## API
-
-La aplicación utilizada para la API es API mock para almacenar y recuperar los datos. La URL de la API es: `https://650cfbe547af3fd22f6817b0.mockapi.io/table`.
-
-## Estructura del Proyecto
-
-- La carpeta `Modulos` contiene el `src` para proxima modularizacion.
-- El archivo HTML `index.html` representan la pagina principal donde se encuentra el programa.
-- El archivo `main.js` contiene el funcionamiento del programa.
-- El archivo `style.css` por ahora no se a agregado ningun estilo, asi que no tiene ningun funcionamiento del programa por ahora.
