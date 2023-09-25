@@ -1,52 +1,54 @@
 let bodyPag = document.querySelector("body");
 
+function buscador(){
+  const buscador = document.createElement("input")
+  buscador.setAttribute("type", "number");
+  buscador.setAttribute("name", "valor");
+  buscador.setAttribute("id", "valor");
+  buscador.setAttribute("placeholder", "Ingrese Nombre o ID");
+  bodyPag.appendChild(buscador)
 
-// Realizar una solicitud a la API de Pokémon
-fetch(`https://pokeapi.co/api/v2/pokemon/`)
-  .then((res)=> res.json())
-  .then(data => crearPoke(data))
-
-function apiCont(namePoke){
-  fetch(`https://pokeapi.co/api/v2/pokemon/${namePoke}`)
-  .then((res)=> res.json())
-  .then(data => console.log(data))
+  const enviar = document.createElement("input");
+  enviar.setAttribute("type", "submit");
+  enviar.setAttribute("value", "Enviar");
+  bodyPag.appendChild(enviar)
 }
 
+buscador()
 
-  function crearPoke(data){
-    
-    const tituloCont = document.createElement("div")
-    const titulo = document.createElement("h1")
-    const container = document.createElement("div")
-    const carta = document.createElement(`div`)
-    tituloCont.classList.add("tituloCont")
-    titulo.innerText = "Pokedex"
-    carta.classList.add("pokemones")
-    container.classList.add("container")
 
-    
-    
-    // Recorrer los resultados
-    data.results.forEach(pokemon => {
-      const botPoke = document.createElement(`button`)
-      const nombrePoke = pokemon.name
-      botPoke.id = "myPokemon"
-      botPoke.innerText = pokemon.name
-      apiCont(nombrePoke)
+function numPokemonesMostrar(Num) {
+  fetch(`https://pokeapi.co/api/v2/pokemon/${Num}/`)
+  .then(respuesta => respuesta.json())
+  .then(data => createPokemon(data))
+}
 
-      botPoke.addEventListener(`click`, () => {
-        Swal.fire({
-            title: `${pokemon.name}`,
-
-        });
-      })
-
-      tituloCont.appendChild(titulo)
-      carta.appendChild(botPoke)
-      container.appendChild(tituloCont)
-      container.appendChild(carta)
-      
-      bodyPag.appendChild(container)
-    });
+function recorrerJson(cuantosRecorrera){
+  for (let i = 1; i < cuantosRecorrera; i++) {
+    numPokemonesMostrar(i)
   }
+}
+
+function crearPoke(pokemon){
+
+  const container = document.createElement("div")
+  container.classList.add("container")
+  
+  const tituloCont = document.createElement("div")
+  tituloCont.classList.add("tituloCont")
+
+  const titulo = document.createElement("h1")
+  titulo.innerText = "Pokedex"
+
+  const carta = document.createElement(`div`)
+  carta.classList.add("pokemones")
+  
+
+
+  tituloCont.appendChild(titulo)
+  container.appendChild(tituloCont)
+  container.appendChild(carta)
+  bodyPag.appendChild(container)
+
+}
 
