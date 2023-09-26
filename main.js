@@ -78,9 +78,54 @@ function createPokemon(pokemon){
   card.appendChild(spriteContainer);
   card.appendChild(number);
   card.appendChild(name);
+  
+  const nombre = document.createElement('button');
+    name.id = 'myPokemon';
+    name.innerText = pokemon.name;
+    name.addEventListener('click',async() =>{
+        Swal.fire({
+            title: `${pokemon.name}`,
+            text: 'Modal with a custom image.',
+            imageUrl: `${pokemon.sprites.other.dream_world.front_default}`,
+            html: `
+                ${pokemon.stats.map(data=>`
+                <div>
+                    <input 
+                        type="range" 
+                        value=${data.base_stat}
+                        name />
+                    <label data-name=${data.stat.name}> 
+                        <b>${data.base_stat}</b> 
+                        ${data.stat.name}
+                    </label>
+                </div>
+                `).join("")}   
+            `,
+            confirmButtonText: 'OK',
+            cancelButtonText: 'Enviar',
+            showCancelButton: true,
+            showCloseButton: true,
+            imageWidth: "80%",
+            imageHeight: "80%",
+            
+        });
+
+            let containerHtml = document.querySelector("#swal2-html-container")
+            containerHtml.addEventListener("input", (e) =>{
+                let myLabel = e.target.nextElementSibling;
+                myLabel.innerHTML = `<b>${e.target.value}</b> ${myLabel.dataset.name}` 
+            })
+
+            let sendMockAPI = document.querySelector(".swal2-html-container")
+            sendMockAPI.addEventListener("change", (e) =>{
+                console.log(e.target);
+            })
+    })
+
 
   spriteContainer.appendChild(sprite);
   pokemonContainer.appendChild(card)
+  card.appendChild(nombre)
   container.appendChild(pokemonContainer)
 }
 
