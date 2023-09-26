@@ -1,6 +1,9 @@
 let bodyPag = document.querySelector("body");
+
 const container = document.createElement("div")
 container.classList.add("container")
+
+
 
 bodyPag.appendChild(container)
 
@@ -80,9 +83,9 @@ function createPokemon(pokemon){
   card.appendChild(name);
   
   const nombre = document.createElement('button');
-    name.id = 'myPokemon';
-    name.innerText = pokemon.name;
-    name.addEventListener('click',async() =>{
+    nombre.id = 'myPokemon';
+    nombre.innerText = pokemon.name;
+    nombre.addEventListener('click',async() =>{
         Swal.fire({
             title: `${pokemon.name}`,
             text: 'Modal with a custom image.',
@@ -129,11 +132,15 @@ function createPokemon(pokemon){
   container.appendChild(pokemonContainer)
 }
 
+function enviarForm(){
+  
+}
+
 
 
 
 titulo()
 buscador()
-fetchPokemons(9)
+fetchPokemons(20)
 
 
