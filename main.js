@@ -96,9 +96,9 @@ function createPokemon(pokemon){
                     <input 
                         type="range" 
                         value=${data.base_stat}
-                        name />
+                        name=${data.stat.name} />
                     <label data-name=${data.stat.name}> 
-                        <b>${data.base_stat}</b> 
+                        <b id ="valor">${data.base_stat}</b> 
                         ${data.stat.name}
                     </label>
                 </div>
@@ -118,11 +118,6 @@ function createPokemon(pokemon){
                 let myLabel = e.target.nextElementSibling;
                 myLabel.innerHTML = `<b>${e.target.value}</b> ${myLabel.dataset.name}` 
             })
-
-            let sendMockAPI = document.querySelector(".swal2-html-container")
-            sendMockAPI.addEventListener("change", (e) =>{
-                console.log(e.target);
-            })
     })
 
 
@@ -130,10 +125,6 @@ function createPokemon(pokemon){
   pokemonContainer.appendChild(card)
   card.appendChild(nombre)
   container.appendChild(pokemonContainer)
-}
-
-function enviarForm(){
-  
 }
 
 
