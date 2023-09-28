@@ -16,11 +16,16 @@
 
 ## Metodo de uso
 
-1. Se desplaza a la rama del ejercicio.
+1. Se desplaza al apartado de ramas.
 
-2. Abre el archivo `index.html` en tu navegador web.
+![image](https://github.com/Ancreem/proyectos-JS/assets/139159920/ddb41979-ca0e-4e24-91e3-901be9ebc3e7)
 
-3. Verás una el ejercicio realizado.
+2. Le saldran diferentes ramas tal que asi.
+   
+   ![image](https://github.com/Ancreem/proyectos-JS/assets/139159920/13c57617-1054-4edc-9e91-4a4107220827)
+   
+3. Se desplaza al ejercicio que desee y le da un **click**.
+4. Disfrute de su estadia en mi respositorio.
 
 ## Ejercicio Presupuesto
 
