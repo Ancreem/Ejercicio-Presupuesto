@@ -33,6 +33,9 @@ function titulo (){
 
   tituloCont.appendChild(titulo)
   container.appendChild(tituloCont)
+  titulo.addEventListener("click", function(){
+    location.reload()
+  } )
 }
 
 
@@ -60,6 +63,7 @@ function buscador(){
 
 
 function createPokemon(pokemon){
+
 
   const pokemonContainer = document.createElement("div")
   pokemonContainer.classList.add("pokemon-container")
