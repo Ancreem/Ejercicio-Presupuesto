@@ -17,9 +17,15 @@
     text-align: center;
 }
 
-.pokemon-container{
-    background-color: rgb(34, 198, 195);
+#contPoke{
+    column-count:2;
 }
+
+.pokemon-container{
+    background-color: #9EB384;
+   margin: 20px;
+}
+
 
 #myPokemon{
     background-color: rgb(171, 177, 62);
