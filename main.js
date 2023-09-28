@@ -21,9 +21,10 @@ function fetchPokemons(numeroPokemones) {
 
 function titulo() {
   const tituloCont = document.createElement("div");
+  const link = document.createElement("a")
   tituloCont.classList.add("tituloCont");
   const titulo = document.createElement("h1");
-  titulo.innerText = "Pokedex";
+  titulo.innerText = "pokedex";
 
   tituloCont.appendChild(titulo);
   container.appendChild(tituloCont);
@@ -73,6 +74,8 @@ function searchPokemon(valor) {
     .then((data) => {
       // Crear el Pokémon encontrado
       container.innerHTML = ""; // Limpiar la lista actual de Pokémones
+      titulo()
+      buscador()
       createPokemon(data);
     })
     .catch((error) => {
