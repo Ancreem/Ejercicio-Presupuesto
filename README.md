@@ -25,13 +25,26 @@ Este es un proyecto de una aplicación web simple que te permite explorar Pokém
 
 ## Cómo Usar
 
-1. Abre el archivo `index.html` en tu navegador web.
+1. Para ver la pagina web y su funcionalidad te diriges en esta rama al apartado **Deployments**.
 
-2. Verás una lista de Pokémon en la página. Por defecto, se muestran los primeros 20 Pokémon de la región.
+![imagen](https://github.com/Ancreem/proyectos-JS/assets/139159920/6b4d79f2-1f66-491c-9f4a-c1d457e3c74c)
+
+
+2. Te ingresara a una ventana nueva, siguiente a esto ingresa al icono señalado y ya podras disfrutar de la pagina.
+
+![imagen](https://github.com/Ancreem/proyectos-JS/assets/139159920/6b30d2d4-ac03-4a71-9ec7-19bdbadc06c7)
+
 
 3. Puedes buscar un Pokémon específico ingresando su nombre o número de identificación en el campo de búsqueda y haciendo clic en "Buscar".
 
-4. Cuando hagas clic en el nombre de un Pokémon, se abrirá un modal con más detalles, incluyendo una imagen y estadísticas base.
+   ![imagen](https://github.com/Ancreem/proyectos-JS/assets/139159920/b22ab0e8-b01d-49e1-a551-ed23eb153cd6)
+
+
+4. Cuando hagas clic en el nombre de un Pokémon, se abrirá un modal con más detalles, incluyendo una imagen y estadísticas base, tal que asi.
+
+![imagen](https://github.com/Ancreem/proyectos-JS/assets/139159920/f0609c64-85c1-45eb-8393-73d135499948)
+
+Si deseas volver a la pagina principal dale click al titulo pokedex.
 
 ## Personalización
 
@@ -52,6 +65,10 @@ Si deseas personalizar el estilo de la página, puedes modificar el archivo `sty
 - Los estilos tienen un diseño muy vago, solo se prueba la funcionalidad de los elementos en la pagina.
 
 - Este proyecto es solo un ejemplo básico y puede mejorarse **MUCHÍSIMO**, pero por falta de lógica no se pudo concretar.
+
+- Si tienes alguna sugerencia escribeme a mi correo ancreemroyal@gmail.com.
+
+- Para el entendimiento de como hacer la pokedex se utilizaron diferentes videos de guia
 
 ¡Disfruta explorando la Pokédex!
 
