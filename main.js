@@ -40,26 +40,43 @@ function titulo (){
 
 
 
-function buscador(){
-
+function buscador() {
   const contBuscador = document.createElement("div")
-  contBuscador.setAttribute("class", "contBuscador") 
+  contBuscador.setAttribute("class", "contBuscador")
 
   const buscador = document.createElement("input")
-  buscador.setAttribute("type", "number");
+  buscador.setAttribute("type", "text");
   buscador.setAttribute("name", "valor");
   buscador.setAttribute("id", "valor");
   buscador.setAttribute("placeholder", "Ingrese Nombre o ID");
   contBuscador.appendChild(buscador)
 
-  const enviar = document.createElement("input");
-  enviar.setAttribute("type", "submit");
-  enviar.setAttribute("value", "Enviar");
+  const enviar = document.createElement("button");
+  enviar.setAttribute("type", "button");
+  enviar.innerText = "Buscar";
+  enviar.addEventListener("click", buscarPokemon);
   contBuscador.appendChild(enviar)
-  
+
   container.appendChild(contBuscador)
 }
 
+function buscarPokemon() {
+  const inputValor = document.getElementById("valor").value.toLowerCase();
+
+  // Limpiar la lista actual de Pokémon
+  const pokemonContainer = document.querySelector(".pokemon-container");
+  pokemonContainer.innerHTML = "";
+
+  // Buscar Pokémon por nombre o ID
+  fetch(`https://pokeapi.co/api/v2/pokemon/${inputValor}/`)
+    .then((res) => res.json())
+    .then((data) => {
+      createPokemon(data);
+    })
+    .catch((error) => {
+      console.error("No se encontró ningún Pokémon con ese nombre o ID.");
+    });
+}
 
 
 function createPokemon(pokemon){
