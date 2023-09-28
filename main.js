@@ -1,18 +1,16 @@
 let bodyPag = document.querySelector("body");
 
-const container = document.createElement("div")
-container.classList.add("container")
+const container = document.createElement("div");
+container.classList.add("container");
 
-
-
-bodyPag.appendChild(container)
-
+bodyPag.appendChild(container);
 
 function fetchPokemon(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then((res) => res.json())
     .then((data) => {
-      createPokemon(data);});
+      createPokemon(data);
+    });
 }
 
 function fetchPokemons(numeroPokemones) {
@@ -21,39 +19,67 @@ function fetchPokemons(numeroPokemones) {
   }
 }
 
+function titulo() {
+  const tituloCont = document.createElement("div");
+  tituloCont.classList.add("tituloCont");
+  const titulo = document.createElement("h1");
+  titulo.innerText = "Pokedex";
 
-function titulo (){
-
-  const tituloCont = document.createElement("div")
-  tituloCont.classList.add("tituloCont")
-  const titulo = document.createElement("h1")
-  titulo.innerText = "Pokedex"
-
-  tituloCont.appendChild(titulo)
-  container.appendChild(tituloCont)
+  tituloCont.appendChild(titulo);
+  container.appendChild(tituloCont);
 }
 
+function buscador() {
+  const contBuscador = document.createElement("div");
+  contBuscador.setAttribute("class", "contBuscador");
 
+  const form = document.createElement("form");
 
-function buscador(){
-
-  const contBuscador = document.createElement("div")
-  contBuscador.setAttribute("class", "contBuscador") 
-
-  const buscador = document.createElement("input")
-  buscador.setAttribute("type", "number");
-  buscador.setAttribute("name", "valor");
-  buscador.setAttribute("id", "valor");
-  buscador.setAttribute("placeholder", "Ingrese Nombre o ID");
-  contBuscador.appendChild(buscador)
+  const buscadorInput = document.createElement("input");
+  buscadorInput.setAttribute("type", "text");
+  buscadorInput.setAttribute("name", "valor");
+  buscadorInput.setAttribute("id", "valor");
+  buscadorInput.setAttribute("placeholder", "Ingrese Nombre o ID");
 
   const enviar = document.createElement("input");
   enviar.setAttribute("type", "submit");
-  enviar.setAttribute("value", "Enviar");
-  contBuscador.appendChild(enviar)
-  
-  container.appendChild(contBuscador)
+  enviar.setAttribute("value", "Buscar");
+
+  form.appendChild(buscadorInput);
+  form.appendChild(enviar);
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const valor = buscadorInput.value.trim();
+    if (valor) {
+      // Llamar a la función para buscar el Pokémon por nombre o ID
+      searchPokemon(valor);
+    }
+  });
+
+  contBuscador.appendChild(form);
+  container.appendChild(contBuscador);
 }
+
+function searchPokemon(valor) {
+  // Hacer una solicitud a la API para buscar el Pokémon por nombre o ID
+  fetch(`https://pokeapi.co/api/v2/pokemon/${valor.toLowerCase()}/`)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Pokémon no encontrado");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      // Crear el Pokémon encontrado
+      container.innerHTML = ""; // Limpiar la lista actual de Pokémones
+      createPokemon(data);
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+}
+
 
 
 
