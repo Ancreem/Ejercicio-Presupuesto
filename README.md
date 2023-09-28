@@ -2,6 +2,21 @@
 
 Este es un proyecto de una aplicación web simple que te permite explorar Pokémon de la región utilizando la [PokeAPI](https://pokeapi.co/). Puedes buscar Pokémon por nombre o número de identificación y ver los detalles de cada uno.
 
+### Contenido 
+
+- [Contenido del Repositorio](#contenido-del-repositorio)
+
+- [Cómo Usar](#cómo-usar)
+
+- [Personalización](#personalización)
+
+- [Api utilizada](#api-utilizada)
+
+- [Dependencias](#dependencias)
+
+- [Notas](#notas)
+  
+
 ## Contenido del Repositorio
 
 - `index.html`: El archivo HTML que define la estructura de la página web.
@@ -22,6 +37,10 @@ Este es un proyecto de una aplicación web simple que te permite explorar Pokém
 
 Si deseas personalizar el estilo de la página, puedes modificar el archivo `style.css`. Puedes cambiar colores, fuentes y diseños según tus preferencias.
 
+## Api utilizada
+
+- La API utilizada para extraer los pokemones fue [PokeApi](https://pokeapi.co) más exactamente el V2 de esta misma.
+
 ## Dependencias
 
 - [SweetAlert2](https://sweetalert2.github.io/): Se utiliza para mostrar un modal con detalles del Pokémon al hacer clic en su nombre.
@@ -32,7 +51,7 @@ Si deseas personalizar el estilo de la página, puedes modificar el archivo `sty
   
 - Los estilos tienen un diseño muy vago, solo se prueba la funcionalidad de los elementos en la pagina.
 
-- Este proyecto es solo un ejemplo básico y puede mejorarse **MUCHISIMO** pero por falta de logica no se pudo concretar.
+- Este proyecto es solo un ejemplo básico y puede mejorarse **MUCHÍSIMO**, pero por falta de lógica no se pudo concretar.
 
 ¡Disfruta explorando la Pokédex!
 
