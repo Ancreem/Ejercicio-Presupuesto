@@ -30,13 +30,14 @@ formulario.addEventListener("submit", async (e)=>{
     location.reload()
 });
 
+
 document.addEventListener("DOMContentLoaded", async (e)=>{
     const tabla = document.querySelector("#data-table");
     let res = await(await fetch(url)).json();
     console.log(res)
     res.map((element)=>{
         tabla.insertAdjacentHTML("beforeend",`
-        <tr>
+        
             <td>${element.id}</td>
             <td>${element.valor}</td>
             <td>${element.caja}</td>
@@ -68,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async (e)=>{
                     </svg>
                 </button>
             </td>
-        </tr>
+        
         `)
     });
 
