@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", async (e)=>{
     const tabla = document.querySelector("#data-table");
     totalIngresos = 0; 
     totalEgresos = 0; 
+    const pesos = (p1) => new Intl.NumberFormat(`de-DE`, { style: `currency`, currency: `COP`}).format(p1)
     
     let res = await(await fetch(url)).json();
     console.log(res)
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async (e)=>{
         tabla.insertAdjacentHTML("beforeend",`
         <tr>
         <td>${element.id}</td>
-        <td>${element.valor}</td>
+        <td>${pesos(element.valor)} COP</td>
         <td>${element.caja}</td>
         <td>
             <button id="${element.id}" class="delet">
@@ -101,10 +102,10 @@ document.addEventListener("DOMContentLoaded", async (e)=>{
 
     const resultado = totalIngresos - totalEgresos;
     document.querySelector("#Total").innerHTML = `
-        <h3>Total Ingresos:${totalIngresos}</h3>
-        <h3>Total Ingresos:${totalEgresos}</h3>
+        <h3>Total Ingresos:${pesos(totalIngresos)}</h3>
+        <h3>Total Egresos:${pesos(totalEgresos)}</h3>
 
-        <h3>Total de Ingresos y Egresos:${resultado}</h3>
+        <h3>Total de Ingresos y Egresos:${pesos(resultado)}</h3>
 
     `;
 });
