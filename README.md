@@ -39,7 +39,7 @@
 
 ## API
 
-La aplicación utilizada para la API es API mock para almacenar y recuperar los datos. La URL de la API es: `https://650cfbe547af3fd22f6817b0.mockapi.io/table`.
+Se utilizo Json server, donde ya no se utiliza un creador de api, busca la informacion en `dv.json` y actualiza los datos de la pagina.
 
 ## Estructura del Proyecto
 
