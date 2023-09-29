@@ -3,7 +3,7 @@ const formEdit = document.querySelector("#formEdit");
 const dialog = document.querySelector("dialog");
 
 
-const url = "https://650cfbe547af3fd22f6817b0.mockapi.io/table"
+const url = "http://127.0.0.1:5010/presupuestos"
 
 formulario.addEventListener("submit", async (e)=>{
     e.preventDefault();
