@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async (e)=>{
         tabla.insertAdjacentHTML("beforeend",`
         <tr>
         <td>${element.id}</td>
-        <td>${pesos(element.valor)} COP</td>
+        <td>${pesos(element.valor)}</td>
         <td>${element.caja}</td>
         <td>
             <button id="${element.id}" class="delet">
