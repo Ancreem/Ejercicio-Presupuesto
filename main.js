@@ -6,7 +6,7 @@ const dialog = document.querySelector("dialog");
 let totalIngresos = 0;
 let totalEgresos = 0;
 
-const url = "http://127.0.0.1:5010/presupuestos"
+const url = "http://127.0.0.12:5010/presupuestos"
 
 formulario.addEventListener("submit", async (e)=>{
     e.preventDefault();
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", async (e)=>{
         <h3>Total Ingresos:${pesos(totalIngresos)}</h3>
         <h3>Total Egresos:${pesos(totalEgresos)}</h3>
 
-        <h3>Total de Ingresos y Egresos:${pesos(resultado)}</h3>
+        <h3>Presupuesto Total:${pesos(resultado)}</h3>
 
     `;
 });
