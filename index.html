@@ -12,7 +12,7 @@
         <h2>Edit Data</h2>
         <form id="formEdit" action="">
             <input type="number" name="valor" id="valor" placeholder="Ingrese el valor">
-            <input type="radio" name="caja" id="caja" value="ingreso"><label for="caja">Ingreso</label>
+            <input type="radio" name="caja" id="caja" value="ingreso" required><label for="caja">Ingreso</label>
             <input type="radio" name="caja" id="caja" value="egreso"><label for="caja">Egreso</label>
             <input type="submit" name="" id="" value="Enviar">
         </form>
@@ -21,8 +21,8 @@
 
     <h1>Presupuesto</h1>
     <form id="formAdd" action="">
-        <input type="number" name="valor" id="valor" placeholder="Ingrese el valor">
-        <input type="radio" name="caja" id="caja" value="ingreso" checked="true"><label for="caja">Ingreso</label>
+        <input type="number" name="valor" id="valor" required  placeholder="Ingrese el valor">
+        <input type="radio" name="caja" id="caja" value="ingreso" required checked="true"><label for="caja">Ingreso</label>
         <input type="radio" name="caja" id="caja" value="egreso"><label for="caja">Egreso</label>
         <input type="submit" name="" id="" value="Enviar">
     </form>
